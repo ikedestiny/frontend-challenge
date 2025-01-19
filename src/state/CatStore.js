@@ -15,11 +15,20 @@ const catStore = create((set, get) => ({
     get_all_cats: async () => {
         // Example: fetch cats from an API or perform other logic
         const cats = await API.get_random_cats(20)
-        console.log(cats)
         set({ all_cats: cats });
     },
+
+    add_more_cats: async () => {
+        const currentCats = get().all_cats;
+        const cats = await API.get_random_cats(20)
+        const updatedCats = [...currentCats, ...cats]
+
+        set({ all_cats: updatedCats })
+    },
+
     add_to_favorites: (cat) => {
         const currentFavorites = get().favorite_cats;
+
         const updatedFavorites = [...currentFavorites, cat];
         set({ favorite_cats: updatedFavorites });
         localStorage.setItem("favorite_cats", JSON.stringify(updatedFavorites));
