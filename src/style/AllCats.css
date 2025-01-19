@@ -1,0 +1,11 @@
+body {
+  background-color: white;
+}
+
+.all_cats {
+  padding-top: 8rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
