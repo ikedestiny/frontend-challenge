@@ -19,3 +19,11 @@ a {
   margin-right: 2rem;
   color: white;
 }
+
+button {
+  background: none;
+  border: none;
+  font-size: xx-large;
+  margin-right: 2rem;
+  color: white;
+}
