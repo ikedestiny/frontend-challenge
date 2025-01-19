@@ -11,8 +11,8 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route exact path='/' element={<AllCats />} />
-          <Route exact path='/favorites' element={<FavoriteCats />} />
+          <Route exact path='/frontend-challenge/' element={<AllCats />} />
+          <Route exact path='/frontend-challenge/favorites' element={<FavoriteCats />} />
         </Routes>
       </Router>
     </div>
